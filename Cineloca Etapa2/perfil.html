@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineLoca - Perfil</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="imagem-logo.jpg.jpeg" alt="Logo da Empresa" class="logo">
+    </div>
+    <h1>CineLoca</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+        <li><a href="favoritos.html">Favoritos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="user-profile">
+    <h2>Bem-vindo ao seu Perfil</h2>
+
+    <!-- Exibe as informações do perfil -->
+    <div class="profile-info">
+      <div class="profile-image">
+        <img src="foto-perfil.jpg" alt="Foto do Usuário" id="profile-pic">
+        <button id="edit-photo-btn">Alterar Foto</button>
+      </div>
+      <div class="profile-details">
+        <h3 id="profile-name">Nome do Usuário</h3>
+        <p id="profile-email">Email: usuario@cineloca.com</p>
+        <p>Avaliações feitas: 5</p>
+      </div>
+    </div>
+
+    <!-- Formulário de Edição (inicialmente escondido) -->
+    <div id="edit-form" class="edit-form" style="display: none;">
+      <h3>Editar Perfil</h3>
+      <form id="profile-edit-form">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" value="Nome do Usuário" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="usuario@cineloca.com" required><br><br>
+
+        <label for="photo">Foto de Perfil:</label>
+        <input type="file" id="photo" name="photo" accept="image/*"><br><br>
+
+        <button type="button" id="save-changes-btn">Salvar Alterações</button>
+        <button type="button" id="cancel-edit-btn">Cancelar</button>
+      </form>
+    </div>
+
+    <button id="edit-profile-btn">Editar Perfil</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 CineLoca</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

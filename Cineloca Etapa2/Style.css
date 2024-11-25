@@ -1,0 +1,250 @@
+/* Estilo para o corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #cc1515;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Altura mínima da tela (para garantir centralização vertical) */
+  flex-direction: column; /* Para garantir que os elementos fiquem empilhados verticalmente */
+}
+
+/* Estilo para o cabeçalho */
+header {
+  background-color: #0c0b0b;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Container do logo */
+.logo-container {
+  text-align: center;
+  margin-top: 20px; /* Ajuste conforme necessário */
+}
+
+.logo {
+  max-width: 150px; /* Ajuste o tamanho do logo */
+  height: auto;
+}
+
+/* Estilo do título no cabeçalho */
+header h1 {
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+/* Estilo da navegação no cabeçalho */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 30px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #444;
+}
+
+/* Centraliza a seção do perfil */
+section.user-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  max-width: 800px; /* Limita a largura para dispositivos grandes */
+  margin-bottom: 20px;
+}
+
+/* Estilo do conteúdo do perfil */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Estilo da imagem de perfil */
+.profile-image {
+  position: relative;
+}
+
+.profile-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.profile-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Estilo do formulário de edição */
+.edit-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* Limita a largura do formulário */
+  margin-top: 20px;
+  text-align: left;
+}
+
+.edit-form input[type="text"],
+.edit-form input[type="email"],
+.edit-form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #0c0b0b;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+/* Botão de cancelar com cor de fundo diferente */
+#cancel-edit-btn {
+  background-color: #cc1515;
+}
+
+#cancel-edit-btn:hover {
+  background-color: #a10f0f;
+}
+
+/* Esconde o formulário de edição por padrão */
+#edit-form {
+  display: none;
+}
+
+/* Estilo para o rodapé */
+footer {
+  background-color: #0f0f0f;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Estilo para a lista de filmes */
+.movie-list .movies {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza os cards de filmes */
+}
+
+/* Estilo do card de cada filme */
+.movie-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+/* Estilo da imagem do filme */
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Estilo para as estrelas de avaliação */
+.movie-rating {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.movie-rating .star {
+  color: #ccc; /* Cor padrão das estrelas vazias */
+  transition: color 0.3s ease;
+}
+
+/* Preenchimento das estrelas ao passar o mouse (hover) */
+.movie-rating .star:hover,
+.movie-rating .star.hover {
+  color: #f39c12; /* Cor das estrelas preenchidas no hover */
+}
+
+/* Estrela preenchida permanentemente após clique */
+.movie-rating .star.filled {
+  color: #f39c12; /* Cor das estrelas preenchidas permanentemente */
+}
+
+/* Estilo do card de filmes - Efeitos ao passar o mouse */
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.favorite-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #cc1515;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.favorite-btn:hover {
+  background-color: #a40e0e;
+}
+
+#favorite-movies {
+  list-style: none;
+  padding: 0;
+}
+
+#favorite-movies li {
+  background-color: #fff;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
